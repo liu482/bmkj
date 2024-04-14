@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>团队成员</title>
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* 成员卡片样式 */
+        .member-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+            margin-bottom: 20px;
+        }
+
+        .member-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .member-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .member-details {
+            padding: 20px;
+        }
+
+        .member-name {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .member-role {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .member-info a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .member-info a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>团队成员</h1>
+
+    <div class="member-card">
+        <img src="http://q1.qlogo.cn/g?b=qq&nk=3460077685&s=5" alt="北辞">
+        <div class="member-details">
+            <div class="member-name">北辞</div>
+            <div class="member-role">项目主发起者</div>
+            <div class="member-info"><a href="https://www.baidu.com" target="_blank">QQ: 3460077685</a></div>
+        </div>
+    </div>
+
+    <div class="member-card">
+        <img src="http://q1.qlogo.cn/g?b=qq&nk=3096142327&s=5" alt="喃娘">
+        <div class="member-details">
+            <div class="member-name">喃娘</div>
+            <div class="member-role">摆烂的</div>
+            <div class="member-info"><a href="https://www.baidu.com" target="_blank">QQ: 10010</a></div>
+        </div>
+    </div>
+
+    <div class="member-card">
+        <img src="http://q1.qlogo.cn/g?b=qq&nk=3096142327&s=5" alt="扫地的">
+        <div class="member-details">
+            <div class="member-name">扫地的</div>
+            <div class="member-role">扫地的</div>
+            <div class="member-info"><a href="https://www.baidu.com" target="_blank">QQ: 100010</a></div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
