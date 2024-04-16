@@ -1,0 +1,165 @@
+    /* 全局样式 */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #eaeaea;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* 头部样式 */
+        .wyb_s {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+            position: relative; /* 添加定位 */
+            transition: all 0.3s ease; /* 添加过渡效果 */
+        }
+        .logo img {
+            height: 50px;
+        }
+        .menu ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+      .logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px; /* 可以根据需要调整文字和图片之间的间距 */
+}
+
+.logo span {
+    font-size: 16px; /* 根据需要调整文字大小 */
+    color: #333; /* 根据需要调整文字颜色 */
+}
+        .menu li {
+            margin: 0 15px;
+        }
+        .phone {
+            display: flex;
+            align-items: center;
+            color: #333;
+        }
+        .phone .ico {
+            width: 30px;
+            height: 30px;
+            background: url('static/image/img11.png') no-repeat center center;
+            background-size: cover;
+            margin-right: 10px;
+        }
+
+    
+/* 汉堡按钮样式 */
+.hamburger {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 999; /* 确保按钮位于最上层 */
+    transition: all 0.3s ease; /* 添加过渡效果 */
+    background-color: transparent; /* 使按钮背景透明 */
+    border: none; /* 移除按钮边框 */
+    padding: 0; /* 移除按钮内边距 */
+}
+
+.hamburger span {
+    display: block;
+    width: 30px; /* 保持原尺寸 */
+    height: 3px;
+    background-color: #333;
+    margin: 6px auto;
+    transition: all 0.3s ease; /* 添加过渡效果 */
+}
+
+/* 汉堡按钮激活状态样式 */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg); /* 旋转45度，并向下移动一定距离 */
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0; /* 隐藏中间条 */
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg); /* 旋转-45度，并向上移动一定距离 */
+}
+
+
+        /* 主要内容区域样式 */
+        .w_width {
+            max-width: 1570px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        /* 响应式图片 */
+        .hidden-xs {
+            display: none;
+        }
+        .visible-xs {
+            display: block;
+        }
+
+        /* 媒体查询 - 针对小屏幕设备 */
+        @media (max-width: 767px) {
+            .wyb_s, .w_width {
+                padding: 10px;
+            }
+            .menu ul {
+                display: none; /* 默认隐藏菜单 */
+                flex-direction: column;
+            }
+            .menu.open ul {
+                display: flex; /* 当菜单处于打开状态时显示 */
+            }
+            .menu li {
+                margin: 5px 0;
+            }
+            .hidden-xs {
+                display: block;
+            }
+            .visible-xs {
+                display: none;
+            }
+        }
+      
+      
+/* 横屏模式下隐藏汉堡按钮 */
+@media screen and (orientation: landscape) {
+    .hamburger {
+        display: none; /* 隐藏汉堡按钮 */
+    }
+}
+
+
+/* 横屏模式下，导航栏的文字与图片横向对齐 */
+@media screen and (orientation: landscape) {
+    .menu {
+        display: flex;
+        justify-content: center; /* 将导航项水平居中对齐 */
+        align-items: center; /* 垂直居中对齐 */
+    }
+    .menu ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+    .menu li {
+        margin: 0 15px;
+    }
+    .phone {
+        margin-left: auto; /* 将电话号码移到右侧 */
+    }
+}

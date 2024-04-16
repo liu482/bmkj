@@ -1,0 +1,103 @@
+ /* 全局样式 */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #eaeaea;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* 头部样式 */
+        .wyb_s {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+            position: relative; /* 添加定位 */
+            transition: all 0.3s ease; /* 添加过渡效果 */
+        }
+        .logo img {
+            height: 50px;
+        }
+        .menu ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+        .menu li {
+            margin: 0 15px;
+        }
+        .phone {
+            display: flex;
+            align-items: center;
+            color: #333;
+        }
+        .phone .ico {
+            width: 30px;
+            height: 30px;
+            background: url('static/image/img11.png') no-repeat center center;
+            background-size: cover;
+            margin-right: 10px;
+        }
+
+        /* 汉堡按钮样式 */
+        .hamburger {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            z-index: 999; /* 确保按钮位于最上层 */
+            transition: all 0.3s ease; /* 添加过渡效果 */
+        }
+        .hamburger span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: #333;
+            margin: 6px auto;
+            transition: all 0.3s ease; /* 添加过渡效果 */
+        }
+
+        /* 主要内容区域样式 */
+        .w_width {
+            max-width: 1570px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        /* 响应式图片 */
+        .hidden-xs {
+            display: none;
+        }
+        .visible-xs {
+            display: block;
+        }
+
+        /* 媒体查询 - 针对小屏幕设备 */
+        @media (max-width: 767px) {
+            .wyb_s, .w_width {
+                padding: 10px;
+            }
+            .menu ul {
+                display: none; /* 默认隐藏菜单 */
+                flex-direction: column;
+            }
+            .menu.open ul {
+                display: flex; /* 当菜单处于打开状态时显示 */
+            }
+            .menu li {
+                margin: 5px 0;
+            }
+            .hidden-xs {
+                display: block;
+            }
+            .visible-xs {
+                display: none;
+            }
+        }

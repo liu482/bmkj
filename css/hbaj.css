@@ -1,0 +1,28 @@
+/* 汉堡按钮样式 */
+.hamburger {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    z-index: 999; /* 确保按钮位于最上层 */
+}
+
+/* 汉堡按钮的箭头图标样式 */
+.hamburger .icon {
+    width: 30px;
+    height: 30px;
+    /* 这里使用 Font Awesome 的图标类 */
+    font-size: 24px; /* 调整图标大小 */
+    line-height: 30px; /* 垂直居中 */
+    transition: transform 0.3s ease; /* 添加过渡效果 */
+}
+
+/* 初始状态为图标未旋转 */
+.hamburger .icon.rotate {
+    transform: rotate(0deg);
+}
+
+/* 当按钮被激活时，旋转图标 90 度 */
+.hamburger.active .icon.rotate {
+    transform: rotate(90deg);
+}
